@@ -17,12 +17,13 @@
   /*font-size: 16px;
   font-family: "Lucida Sans Typewriter", Consolas, Monaco, monospace;*/
   font: 16px/24px Lato, Helvetica, Arial, sans-serif, 'sans-serif';
+  padding: 0%;
 }
 tw-passage {
     display: block;
-    width: 400px;
     margin: 50px auto;
     color: #ffce96;
+    width: 400px;
 }
 .hud {
     font-size: 14px;
@@ -61,46 +62,54 @@ tw-link, .enchantment-link {
 tw-link:hover, .enchantment-link:hover {
     color: #f1f2da;
 }
-/*@media screen and (max-width: 960px) {
-  .passage {
-    font-size: 1.5em;
-  width: 75%;
+/*@media only screen and (max-width: 960px) {
+  tw-passage {
+    width: 100%;
+    padding: 5%;
+    margin: 0 auto;
+    font-size: 24px;
+  }
+  .hud {
+    font-size: 40px;
+    height: 90px;
+    padding: 33px;
+  }
+  .dinero, .der, .izq, .dia { width: 49%;}
+  .tw-expression img {
+    width: 100%;
+    image-rendering: pixelated;
   }
 }
-@media screen and (max-width: 640px) {
-  .passage {
-    font-size: 1.25em;
-  width: 95%;
-  }
+@media screen and (min-width: 960px) {
+  tw-passage { width: 400px; }
 }*/</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.asPesos = function (pesos) {
 	return '$' + Number(pesos + 'e-3').toFixed(3);
 };</script><tw-passagedata pid="1" name="Sueldo" tags="" position="775,275" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día 1&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; $400.000&lt;/div&gt;&lt;/div&gt;
 &lt;img src=&quot;https://i.imgur.com/eaIJsUK.gif&quot;&gt;(set: $dia to 1)(set: $genero to &quot;a&quot;)(set: $gen to 1)
 Est$genero eres tú: Joven, solter$genero y sin hijos.
-Tienes un sueldo mensual de &#39;&#39;$400.000&#39;&#39;. Vives en un oscuro y pequeño [[departamento estudio en la capital]].</tw-passagedata><tw-passagedata pid="2" name="departamento estudio en la capital" tags="" position="775,425" size="100,100">(set: $sueldo to 400000)(set: $salud to 10)(set: $luz to 1)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/edkmMll.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/eaIJsUK.gif&#39;&gt;&quot;) ]
+Tienes un sueldo mensual de &#39;&#39;$400.000&#39;&#39;. Vives en un oscuro y pequeño [[departamento estudio en la capital]].</tw-passagedata><tw-passagedata pid="2" name="departamento estudio en la capital" tags="" position="775,425" size="100,100">(set: $sueldo to 400000)(set: $salud to 10)(set: $luz to 1)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/83wAVpd.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/EMmyc1W.gif&#39;&gt;&quot;) ]
 $img
 Te sientes afortunad$genero por tener tu propio lugar, aunque estés pagando &#39;&#39;$200.000&#39;&#39; por 24 metros cuadrados. Sabes que si lo pierdes, será muy difícil conseguir otro departamento por ese valor en la capital.
 
-De pronto, suena tu [[celular]].</tw-passagedata><tw-passagedata pid="3" name="celular" tags="" position="775,575" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;
+De pronto, suena tu [[celular]].</tw-passagedata><tw-passagedata pid="3" name="celular" tags="" position="775,573.3333333333334" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;
 &lt;img src=&quot;https://i.imgur.com/i92F58W.gif&quot;&gt;
 &lt;i&gt;“Nueva Notificación Cuenta de Luz.
 Total a pagar: $8.050.
-Vence en 30 días más.”&lt;/i&gt;
+Fecha de vencimiento: 30 días más.”&lt;/i&gt;
 
-Puedes pagar esta cuenta, o postergarla ya que aún le queda un mes.
-
-[[Pagar cuenta de luz]]
-[[Postergar pago de cuenta]]</tw-passagedata><tw-passagedata pid="4" name="Pagar cuenta de luz" tags="" position="700,725" size="100,100">(set: $sueldo to $sueldo - 8050)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;
+Puedes [[pagar esta cuenta inmediatamente|Pagar cuenta de luz]], o [[postergarla|Postergar pago de cuenta]] y se te recordará más adelante.</tw-passagedata><tw-passagedata pid="4" name="Pagar cuenta de luz" tags="" position="700,725" size="100,100">(set: $sueldo to $sueldo - 8050)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;
 $img
 Terminas de hacer la transferencia. Te quedan (print: asPesos($sueldo)) en tu cuenta.
 (set: $luz to 0)
-[[Mañana]] debes ir a trabajar.</tw-passagedata><tw-passagedata pid="5" name="Postergar pago de cuenta" tags="" position="850,725" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;
+[[Mañana]] debes levantarte temprano a esperar la micro para ir a trabajar.</tw-passagedata><tw-passagedata pid="5" name="Postergar pago de cuenta" tags="" position="850,725" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;
 $img
-Quizás lo mejor sea ver si llegan cuentas más urgentes a lo largo del mes.
+Decides postergar el pago de la cuenta, y anotas un recordatorio para 2 semanas más.
 
-[[Mañana]] debes ir a trabajar.</tw-passagedata><tw-passagedata pid="6" name="Mañana" tags="" position="700,875" size="100,100">(set: $dia to $dia + 1)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;
+[[Mañana]] debes ir a trabajar.</tw-passagedata><tw-passagedata pid="6" name="Mañana" tags="" position="700,873.3333333333334" size="100,100">(set: $sueldo to $sueldo - 830)(set: $dia to $dia + 1)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/KKXbsEI.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/AWxj5I7.gif&#39;&gt;&quot;) ]
 $img
-Hola.</tw-passagedata><tw-passagedata pid="7" name="Inicio" tags="" position="775,0" size="100,100">&lt;h1&gt;Antes de comenzar...&lt;/h1&gt; 
+Este es tu lugar de trabajo. Acabas de terminar tu jornada, estás muy cansad$genero y [[solo quieres tomar la micro para irte a tu casa|regresar a tu casa]].
+
+Hoy faltó un$genero de tus compañer(print: $genero)s de trabajo, por lo que tu jefe necesita que alguien [[se quede hasta tarde haciendo sus tareas]]. Si aceptas, recibirás una bonificación de &#39;&#39;$15.000&#39;&#39; a fin de mes, pero puede perjudicar tu salud.</tw-passagedata><tw-passagedata pid="7" name="Inicio" tags="" position="775,0" size="100,100">&lt;h1&gt;Antes de comenzar...&lt;/h1&gt; 
 Este juego es un simulador de manejo de presupuesto inspirado en la &#39;&#39;desigualdad&#39;&#39; que hay en Chile. Para este ejercicio, se tomaron precios actuales de arriendos, copagos de seguros de salud, transporte y demases.
 
 Al momento de desarrollar este juego, el sueldo mínimo en Chile era de &#39;&#39;$301.000 (alrededor de US$400)&#39;&#39; y según el INE, la mitad de los trabajadores en Chile ganan &#39;&#39;$400.000&#39;&#39; o menos.
@@ -110,7 +119,31 @@ Al momento de desarrollar este juego, el sueldo mínimo en Chile era de &#39;&#3
 &lt;div class=&quot;chara&quot;&gt;&lt;div class=&quot;izq&quot;&gt;[[&lt;img src=&quot;https://i.imgur.com/ZJ3ZNd6.png&quot;&gt;|Sueldo]]&lt;/div&gt;&lt;div class=&quot;der&quot;&gt;[[&lt;img src=&quot;https://i.imgur.com/FSw1zYS.png&quot;&gt;|Sueldo2]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Sueldo2" tags="" position="925,275" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día 1&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; $400.000&lt;/div&gt;&lt;/div&gt;
 &lt;img src=&quot;https://i.imgur.com/edkmMll.gif&quot;&gt;(set: $dia to 1)(set: $genero to &quot;o&quot;)(set: $gen to 0)
 Est$genero eres tú: Joven, solter$genero y sin hijos.
-Tienes un sueldo mensual de &#39;&#39;$400.000&#39;&#39;. Vives en un oscuro y pequeño [[departamento estudio en la capital]].</tw-passagedata></tw-storydata>
+Tienes un sueldo mensual de &#39;&#39;$400.000&#39;&#39;. Vives en un oscuro y pequeño [[departamento estudio en la capital]].</tw-passagedata><tw-passagedata pid="10" name="se quede hasta tarde haciendo sus tareas" tags="" position="815,1018.3333333333335" size="100,100">(set: $salud to $salud - 2)(set: $proxsueldo to $proxsueldo + 15000)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/QXAGdiL.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/cgdlYKx.gif&#39;&gt;&quot;) ]
+$img
+Las tareas pendientes de tu compañer$genero eran más difíciles de lo que pensabas. Te sientes muy, muy cansad$genero.
+
+Aún hay locomoción, así que te diriges al paradero y tomas la micro para [[regresar a tu casa]].</tw-passagedata><tw-passagedata pid="11" name="regresar a tu casa" tags="" position="665,1018.3333333333333" size="100,100">(set: $sueldo to $sueldo - 830)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/edkmMll.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/eaIJsUK.gif&#39;&gt;&quot;) ]
+$img
+Luego de un viaje de más de una hora en micro, llegas a tu casa agotad$genero y te metes inmediatamente a la cama a dormir.
+
+[[Mañana será un día mejor]].</tw-passagedata><tw-passagedata pid="12" name="Mañana será un día mejor" tags="" position="665,1168.3333333333333" size="100,100">(set: $sueldo to $sueldo - 830)(set: $dia to $dia + 1)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/KKXbsEI.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/AWxj5I7.gif&#39;&gt;&quot;) ]
+$img
+Hoy por suerte el trabajo ha estado más relajado y ya pronto viene la hora de colación.
+
+Lamentablemente, ayer llegaste tan cansad$genero que no pudiste prepararte el almuerzo. Tus compañeros te ofrecen ir a [[almorzar con ellos]] a un local cercano. Si bien sociabilizar puede subirte el ánimo, sabes que almorzar ahí costará &#39;&#39;$3.450&#39;&#39;.
+
+La otra opción es [[comprarte un sandwich]] por &#39;&#39;$1.100&#39;&#39; del kiosko de la esquina, o [[aguantarte el hambre]] y comer algo cuando llegues a tu casa.</tw-passagedata><tw-passagedata pid="13" name="almorzar con ellos" tags="" position="515,1318.3333333333333" size="100,100">(set: $sueldo to $sueldo - 3800)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/9aeUsTP.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/WBhIb3i.gif&#39;&gt;&quot;) ]
+$img
+Decidiste ir a almorzar con tus compañeros. No habías considerado la propina dentro del costo del almuerzo, por lo que gastaste &#39;&#39;$3.800&#39;&#39; en total, pero al menos pasaste un buen rato.
+
+Te sientes con más ánimo que en la mañana y estás preparad$genero para [[volver a la oficina]].</tw-passagedata><tw-passagedata pid="14" name="comprarte un sandwich" tags="" position="665,1318.3333333333333" size="100,100">(set: $salud to $salud - 1)(set: $sueldo to $sueldo - 1100)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/KKXbsEI.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/AWxj5I7.gif&#39;&gt;&quot;) ]
+$img
+Incompleto.</tw-passagedata><tw-passagedata pid="15" name="aguantarte el hambre" tags="" position="815,1318.3333333333333" size="100,100">(set: $salud to $salud - 2)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/KKXbsEI.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/AWxj5I7.gif&#39;&gt;&quot;) ]
+$img
+Incompleto.</tw-passagedata><tw-passagedata pid="16" name="volver a la oficina" tags="" position="515,1468.3333333333333" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/QXAGdiL.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/cgdlYKx.gif&#39;&gt;&quot;) ]
+$img
+Incompleto.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
