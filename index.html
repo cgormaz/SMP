@@ -23,7 +23,14 @@ tw-passage {
     display: block;
     margin: 50px auto;
     color: #ffce96;
-    width: 400px;
+    width: 100%;
+    padding: 6px;
+    max-width: 400px;
+}
+tw-passage img {
+    width: 100%;
+    max-width: 376px;
+    image-rendering: pixelated;
 }
 .hud {
     font-size: 14px;
@@ -46,12 +53,12 @@ tw-passage {
     padding: 10px 20px;
 }
 .der {
-  width: 170px;
+  max-width: 170px;
   text-align: center;
   float: right;
 }
 .izq {
-  width: 170px;
+  max-width: 170px;
   text-align: center;
   float: left;
 }
@@ -113,6 +120,8 @@ Hoy faltó un$genero de tus compañer(print: $genero)s de trabajo, por lo que tu
 Este juego es un simulador de manejo de presupuesto inspirado en la &#39;&#39;desigualdad&#39;&#39; que hay en Chile. Para este ejercicio, se tomaron precios actuales de arriendos, copagos de seguros de salud, transporte y demases.
 (set: $arriendo to 200000)(set: $proxsueldo to 0)
 Al momento de desarrollar este juego, el sueldo mínimo en Chile era de &#39;&#39;$301.000 (alrededor de US$400)&#39;&#39; y según el (link:&quot;INE&quot;)[(gotoURL:&quot;https://web.archive.org/web/20190914031855/https://www.cnnchile.com/economia/ine-la-mitad-de-los-trabajadores-en-chile-recibe-un-sueldo-igual-o-inferior-a-400-000-al-mes_20190813/&quot;)], la mitad de los trabajadores en Chile ganan &#39;&#39;$400.000&#39;&#39; o menos.
+
+&#39;&#39;NOTA:&#39;&#39; En este ejercicio no se consideraron los pagos de AFP+Isapre/Fonasa, por lo que en realidad el dinero con el que se debiese partir es muchísimo más bajo, y el gasto del CAE equivale al de una carrera técnica.
 
 &gt; (link: &quot;Comenzar juego con sueldo mínimo&quot;)[(set: $sueldo to 301000)(goto: &quot;seleccion&quot;)]
 &gt; (link: &quot;Comenzar juego con sueldo de $400.000&quot;)[(set: $sueldo to 400000)(goto: &quot;seleccion&quot;)]</tw-passagedata><tw-passagedata pid="8" name="seleccion" tags="seleccion" position="775,125" size="100,100">&lt;h1&gt;Elige a tu personaje&lt;/h1&gt;
