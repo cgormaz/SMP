@@ -10,9 +10,12 @@ NOTA: En este ejercicio no se consideraron los pagos de AFP+Isapre/Fonasa, por l
 
 ## FAQ
 
+**Q: ¿En qué fue hecho el juego?**
+El juego fue hecho en Twine 2, con Harlowe 3.1.0. Twine es un motor open source que pueden descargarlo gratuitamente desde [Twinery](https://twinery.org/).
+
 **Q: ¿Estará disponible en más idiomas?**
 
-Me gustaría poder traducirlo en inglés, pero no sé cuándo tendré tiempo de hacerlo. Si les gustaría traducirlo, pueden hacer un fork del proyecto y traducirlo. Si lo hacen, siéntanse libres de agregarse en los créditos.
+Me gustaría poder traducirlo en inglés, pero no sé cuándo tendré tiempo de hacerlo. Si les gustaría traducirlo, pueden hacer un fork del proyecto y traducirlo. Si lo hacen, siéntanse libres de agregarse en los créditos. Editarlo desde Twine es mucho más fácil que editarlo como archivo HTML.
 
 **Q: Necesito imágenes para compartirlo/estoy escribiendo una nota/etc**
 
