@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Nanopesos" startnode="7" creator="Twine" creator-version="2.3.5" ifid="65455588-C424-458A-8A5F-E49C76C659C7" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+<tw-storydata name="Nanopesos" startnode="102" creator="Twine" creator-version="2.3.5" ifid="65455588-C424-458A-8A5F-E49C76C659C7" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
   /*background-image:url("https://spacenews.com/wp-content/uploads/2018/05/24359364107_152b0152ff_k-879x485.jpg");*/
   background-color:#291d2b;
   /*font-size: 16px;
@@ -26,6 +26,9 @@ tw-passage {
     width: 100%;
     padding: 6px;
     max-width: 400px;
+}
+tw-passage a {
+    color: #ff7777;
 }
 tw-passage img {
     width: 100%;
@@ -53,12 +56,12 @@ tw-passage img {
     padding: 10px 20px;
 }
 .der {
-  max-width: 170px;
+  width: 170px;
   text-align: center;
   float: right;
 }
 .izq {
-  max-width: 170px;
+  width: 170px;
   text-align: center;
   float: left;
 }
@@ -119,7 +122,7 @@ Este es tu lugar de trabajo. Acabas de terminar tu jornada, estás muy cansad$ge
 Hoy faltó un$genero de tus compañer(print: $genero)s de trabajo, por lo que tu jefe necesita que alguien [[se quede hasta tarde haciendo sus tareas]]. Si aceptas, recibirás una bonificación de &#39;&#39;$15.000&#39;&#39; a fin de mes, pero puede perjudicar tu salud.</tw-passagedata><tw-passagedata pid="7" name="Inicio" tags="" position="775,0" size="100,100">&lt;h1&gt;Antes de comenzar...&lt;/h1&gt; 
 Este juego es un simulador de manejo de presupuesto inspirado en la &#39;&#39;desigualdad&#39;&#39; que hay en Chile. Para este ejercicio, se tomaron precios actuales de arriendos, copagos de seguros de salud, transporte y demases.
 (set: $arriendo to 200000)(set: $proxsueldo to 0)
-Al momento de desarrollar este juego, el sueldo mínimo en Chile era de &#39;&#39;$301.000 (alrededor de US$400)&#39;&#39; y según el (link:&quot;INE&quot;)[(gotoURL:&quot;https://web.archive.org/web/20190914031855/https://www.cnnchile.com/economia/ine-la-mitad-de-los-trabajadores-en-chile-recibe-un-sueldo-igual-o-inferior-a-400-000-al-mes_20190813/&quot;)], la mitad de los trabajadores en Chile ganan &#39;&#39;$400.000&#39;&#39; o menos.
+Al momento de desarrollar este juego, el sueldo mínimo en Chile era de &#39;&#39;$301.000 (alrededor de US$400)&#39;&#39; y según el &lt;a href=&quot;https://web.archive.org/web/20190914031855/https://www.cnnchile.com/economia/ine-la-mitad-de-los-trabajadores-en-chile-recibe-un-sueldo-igual-o-inferior-a-400-000-al-mes_20190813/&quot; target=&quot;_blank&quot;&gt;INE&lt;/a&gt;, la mitad de los trabajadores en Chile ganan &#39;&#39;$400.000 (alrededor de US$540)&#39;&#39; o menos.
 
 &#39;&#39;NOTA:&#39;&#39; En este ejercicio no se consideraron los pagos de AFP+Isapre/Fonasa, por lo que en realidad el dinero con el que se debiese partir es muchísimo más bajo, y el gasto del CAE equivale al de una carrera técnica.
 
@@ -207,7 +210,7 @@ De pronto te llega una [[notificación]].</tw-passagedata><tw-passagedata pid="2
 &lt;img src=&quot;https://i.imgur.com/CK4HN1L.gif&quot;&gt;
 &lt;i&gt;“Estimado Cliente: Le informamos que sus megas están por agotarse. Recuerde que puede recargar su saldo en nuestro sitio web o en cualquier sucursal.”&lt;/i&gt;
 
-Revisas los precios de los paquetes y bolsas que te alcancen por el resto del mes y dentro de los más económicos, (link: &quot;te decides por la opción de &#39;&#39;$7.000&#39;&#39;&quot;)[(set: $sueldo to $sueldo - 7000)(goto: &quot;saldo&quot;)], que incluye un par de minutos y una cantidad decente para internet.</tw-passagedata><tw-passagedata pid="27" name="creditos" tags="creditos" position="996,10545" size="100,100">&lt;h1&gt;Resultados&lt;/h1&gt;Terminaste este mes con (print: asPesos($sueldo)) y tu salud está al (print: $salud)0%.
+Revisas los precios de los paquetes y bolsas que te alcancen por el resto del mes y dentro de los más económicos, (link: &quot;te decides por la opción de &#39;&#39;$7.000&#39;&#39;&quot;)[(set: $sueldo to $sueldo - 7000)(goto: &quot;saldo&quot;)], que incluye un par de minutos y una cantidad decente para internet.</tw-passagedata><tw-passagedata pid="27" name="creditos" tags="creditos" position="996,10545" size="100,100">(set: $sueldofinal to $sueldo - 200000)&lt;h1&gt;Resultados&lt;/h1&gt;Terminaste este mes con (print: asPesos($sueldo)) y tu salud está al (print: $salud)0%. De no ser por el crédito que solicitaste, habrías terminado con solo (print: asPesos($sueldofinal)) en tu cuenta.
 
 Aún te quedan casi 2 décadas para terminar de pagar el CAE, con cuotas que están en UFs y todos los meses suben.
 
@@ -215,8 +218,8 @@ Además de esto, de ahora en adelante y durante los próximos 12 meses, deberás
 
 Y para terminar, el próximo mes solo recibirás (print: asPesos($proxsueldo)).
 
-&lt;h3&gt;Créditos&lt;/h3&gt;Tipografías: (link:&quot;Chevy Ray&#39;s Pixel Fonts&quot;)[(gotoURL:&quot;https://chevyray.itch.io/pixel-fonts&quot;)]
-Arte &amp; Desarrollo: (link:&quot;@Burasto&quot;)[(gotoURL:&quot;https://twitter.com/Burasto&quot;)]
+&lt;h3&gt;Créditos&lt;/h3&gt;Tipografías: &lt;a href=&quot;https://chevyray.itch.io/pixel-fonts&quot; target=&quot;_blank&quot;&gt;Chevy Ray&#39;s Pixel Fonts&lt;/a&gt;
+Arte &amp; Desarrollo: &lt;a href=&quot;https://twitter.com/Burasto&quot; target=&quot;_blank&quot;&gt;@Burasto&lt;/a&gt;
 Gracias a BerganJudge por la idea de hacer un juego relacionado al sueldo mínimo.
 ¡Y gracias a ti por jugarlo completo!</tw-passagedata><tw-passagedata pid="28" name="saldo" tags="saldo" position="893,2804" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/83wAVpd.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/EMmyc1W.gif&#39;&gt;&quot;) ]
 $img
@@ -244,7 +247,7 @@ Al llegar a la oficina, te das cuenta de que faltan incluso más compañeros que
 
 A las pocas horas de haber llegado, tu tos empeora y uno de tus jefes se te acerca. Te recomienda que es mejor que no vayas a la oficina hasta que te recuperes.
 
-Tomas tus cosas, y te diriges a tu [[hogar]].</tw-passagedata><tw-passagedata pid="33" name="Ir al doctor (-$5.910)." tags="" position="898,3625.3333333333335" size="100,100">(set: $proxsueldo to $proxsueldo - 15000)(set: $sueldo to $sueldo - 5910)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/7BSf2n1.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/KbrOVd0.gif&#39;&gt;&quot;) ]
+Tomas tus cosas, y te diriges a tu [[hogar]].</tw-passagedata><tw-passagedata pid="33" name="Ir al doctor (-$5.910)." tags="" position="898,3625" size="100,100">(set: $proxsueldo to $proxsueldo - 15000)(set: $sueldo to $sueldo - 5910)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/7BSf2n1.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/KbrOVd0.gif&#39;&gt;&quot;) ]
 $img
 Con un poco de dificultad lograste llegar a la consulta. Has estado sudando mucho y el dolor de cabeza ahora es mayor. También has estado tosiendo bastante.
 
@@ -257,7 +260,7 @@ El doctor te toma la temperatura y ve que estás un poco afiebrad$genero. Te ind
 $img
 Te quedas en cama. Sientes que tu dolor de cabeza aumenta. Estás sudando un poco.
 
-Tratas de descansar lo más que puedes. Esperas [[despertar mejor mañana|despertar-mejor-mañana]].</tw-passagedata><tw-passagedata pid="35" name="Despedirse e ir a la farmacia." tags="" position="823,3775.3333333333335" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/LjKZoF9.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/Tiy51GO.gif&#39;&gt;&quot;) ]
+Tratas de descansar lo más que puedes. Esperas [[despertar mejor mañana|despertar-mejor-mañana]].</tw-passagedata><tw-passagedata pid="35" name="Despedirse e ir a la farmacia." tags="" position="823,3775" size="100,100">&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/LjKZoF9.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/Tiy51GO.gif&#39;&gt;&quot;) ]
 $img
 Llegaste a la farmacia. Le muestras la receta al vendedor y te ofrece varias alternativas. Le pides que te de las opciones más baratas de los medicamentos que te recetaron.
 
@@ -525,7 +528,7 @@ Vuelves a la pantalla de tu celular y haces la transferencia. Te vas a [[dormir|
 $img
 Estás regresando del trabajo. Hoy es el día límite para pagar el arriendo, y no quieres tener problemas con el arrendador. Te ha dado bastantes facilidades, dejándote arrendar el departamento pese a que tus liquidaciones son más bajas que los requisitos que pedían originalmente. Sabes que no le costaría nada echarte y conseguir un nuevo arrendatario.
 
-(if: $sueldo &lt; 200000)[Finalmente llegas a tu [[departamento|day26b]].](else:)[Finalmente llegas a tu [[departamento|day26c]].]</tw-passagedata><tw-passagedata pid="97" name="day26b" tags="" position="992.3333333333334,10086" size="100,100">(set: $sueldo to $sueldo - 800)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/83wAVpd.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/EMmyc1W.gif&#39;&gt;&quot;) ]
+(if: $sueldo &lt; 200000)[Finalmente llegas a tu [[departamento|day26b]].](else:)[Finalmente llegas a tu [[departamento|day26c]].]</tw-passagedata><tw-passagedata pid="97" name="day26b" tags="" position="992,10086" size="100,100">(set: $sueldo to $sueldo - 800)&lt;div class=&quot;hud&quot;&gt;&lt;div class=&quot;dia&quot;&gt;&#39;&#39;Día $dia&#39;&#39;&lt;/div&gt;&lt;div class=&quot;dinero&quot;&gt;&#39;&#39;Dinero:&#39;&#39; (print: asPesos($sueldo))&lt;/div&gt;&lt;/div&gt;(if: $gen is 0) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/83wAVpd.gif&#39;&gt;&quot;) ](if: $gen is 1) [ (set: $img to &quot;&lt;img src=&#39;https://i.imgur.com/EMmyc1W.gif&#39;&gt;&quot;) ]
 $img
 Revisas tu cuenta de banco una vez más. Te quedan (print: asPesos($sueldo)) y el arriendo cuesta $200.000. Incluso si esperaras al sueldo del próximo mes (en 4 días más), el próximo mes tendrías que volver a hacer lo mismo.
 
@@ -558,10 +561,12 @@ Aún te quedan casi 2 décadas para terminar de pagar el CAE, con cuotas que est
 
 Además de esto, el próximo mes solo recibirás (print: asPesos($proxsueldo)).
 
-&lt;h3&gt;Créditos&lt;/h3&gt;Tipografías: (link:&quot;Chevy Ray&#39;s Pixel Fonts&quot;)[(gotoURL:&quot;https://chevyray.itch.io/pixel-fonts&quot;)]
-Arte &amp; Desarrollo: (link:&quot;@Burasto&quot;)[(gotoURL:&quot;https://twitter.com/Burasto&quot;)]
+&lt;h3&gt;Créditos&lt;/h3&gt;Tipografías: &lt;a href=&quot;https://chevyray.itch.io/pixel-fonts&quot; target=&quot;_blank&quot;&gt;Chevy Ray&#39;s Pixel Fonts&lt;/a&gt;
+Arte &amp; Desarrollo: &lt;a href=&quot;https://twitter.com/Burasto&quot; target=&quot;_blank&quot;&gt;@Burasto&lt;/a&gt;
 Gracias a BerganJudge por la idea de hacer un juego relacionado al sueldo mínimo.
-¡Y gracias a ti por jugarlo completo!</tw-passagedata></tw-storydata>
+¡Y gracias a ti por jugarlo completo!</tw-passagedata><tw-passagedata pid="102" name="Idioma" tags="" position="470,200" size="100,100">&lt;h1 style=&quot;text-align:center&quot;&gt;Nanopesos&lt;/h1&gt;
+&lt;img src=&quot;https://i.imgur.com/Dwn0rZH.gif&quot;&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;[[Español|Inicio]] | (link:&quot;English&quot;)[(gotoURL:&quot;https://cgormaz.github.io/SMP/NanopesosEN.html&quot;)]&lt;/p&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
